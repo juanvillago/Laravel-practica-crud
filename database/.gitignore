@@ -1,0 +1,11 @@
+*.sqlite*
+/.phpunit.cache
+/public
+/vendor
+.env
+.env.example
+.phpunit.result.cache
+/.fleet
+/.idea
+/.vscode
+/storage/*.key
