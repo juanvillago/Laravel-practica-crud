@@ -40,7 +40,12 @@
                                         </td> 
                                            <td>
                                                 <a href="{{url('category/'.$item->id.'/edit')}}" class="btn btn-primary">Edit</a>
-                                                <a href="{{url('category/'.$item->id.'/delete')}}" class="btn btn-danger">Delete</a>
+                                                <form action="{{url('category/'.$item->id.'/delete')}}" method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
+                                                   
+                                                </form>
                                             </td>
                                     </tr>
                                     @endforeach
