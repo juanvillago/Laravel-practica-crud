@@ -21,5 +21,5 @@ Route::get('/', function () {
 Route::get('category', [App\Http\Controllers\CategoryController::class, 'index']); 
 Route::get('category/create', [App\Http\Controllers\CategoryController::class, 'create']); 
 Route::post('category/create', [App\Http\Controllers\CategoryController::class, 'store']); 
-
-
+Route::get('category/{id}/edit', [App\Http\Controllers\CategoryController::class,'edit']);
+Route::put('category/{id}/edit', [App\Http\Controllers\CategoryController::class,'update']);

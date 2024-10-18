@@ -31,8 +31,14 @@
                                            <td>{{$item->id}}</td> 
                                            <td> {{$item->name}}</td> 
                                            <td> {{$item->description}}</td> 
-                                           <td> {{$item->Inactive}}</td> 
-                                            <td>
+                                           <td> 
+                                            @if($item->Inactive)
+                                                Active
+                                            @else
+                                                Inactive
+                                            @endif
+                                        </td> 
+                                           <td>
                                                 <a href="{{url('category/'.$item->id.'/edit')}}" class="btn btn-primary">Edit</a>
                                                 <a href="{{url('category/'.$item->id.'/delete')}}" class="btn btn-danger">Delete</a>
                                             </td>
